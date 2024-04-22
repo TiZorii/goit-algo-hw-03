@@ -4,6 +4,7 @@ def get_numbers_ticket(min_val, max_val, quantity):
     if not (1 <= min_val <= max_val <= 1000):
         return []
     
+    
     numbers = set()
     while len(numbers) < quantity:
         numbers.add(random.randint(min_val, max_val))
