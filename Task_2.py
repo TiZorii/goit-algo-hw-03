@@ -4,6 +4,9 @@ def get_numbers_ticket(min_val, max_val, quantity):
     if not (1 <= min_val <= max_val <= 1000):
         return []
     
+    max_possible_numbers = max_val - min_val + 1
+    if quantity > max_possible_numbers:
+        return "Кількість чисел перевищує максимально можливу кількість."
     
     numbers = set()
     while len(numbers) < quantity:
